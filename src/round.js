@@ -9,18 +9,11 @@ function createRound(deck) {
 
 function takeTurn(guess,round) {
 	let answer = round.currentCard.correctAnswer;
-	// console.log(`correct answer: ${answer}`);
 	if (guess === answer){
-		//update turn and move to next card
-		// console.log('horray!');
-		// console.log(round.currentCard);
 		round.turns += 1;
-		// console.log(round.turns);
 		round.currentCard = round.deck[round.turns];
-		// console.log(round.currentCard);
-		// console.log(round.incorrectGuesses);
 		return 'correct!'
-	}else{//if guess is wrong, add to incorrect guess{
+	}else{
 		round.incorrectGuesses.push(round.currentCard.id);
 		round.turns += 1;
 		round.currentCard = round.deck[round.turns];

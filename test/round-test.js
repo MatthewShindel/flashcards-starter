@@ -22,7 +22,6 @@ describe('round', function () {
 		assert.isFunction(createRound)
 	});
 	it('should check if createRound has needed key/value pairs', function () {
-		// console.log(testRound);
 		assert.equal(testRound.deck , testDeck)
 		assert.equal(testRound.currentCard , testDeck[0])
 		assert.equal(testRound.turns , 0)
@@ -33,7 +32,7 @@ describe('round', function () {
 	});
 	it('should check if takeTurns adjust round information if we make correct guess', function () {
 		assert.equal(takeTurn(correctGuess, testRound) , 'correct!')
-		assert.equal(testRound.deck , testDeck )//-1
+		assert.equal(testRound.deck , testDeck )
 		assert.equal(testRound.currentCard , testDeck[1])
 		assert.equal(testRound.turns , 1)
 		assert.deepEqual(testRound.incorrectGuesses , [])

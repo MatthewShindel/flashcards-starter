@@ -11,7 +11,6 @@ describe('game', function () {
 	let testDeck;
 	let correctGuess;
 	beforeEach(function () {
-		// start();
 		testCards = prototypeData.slice	(0,prototypeData.length);
 		testDeck = createDeck(testCards);
 		testRound = createRound(testDeck);
